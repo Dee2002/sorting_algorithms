@@ -30,5 +30,7 @@ void shell_sort(int *array, size_t size);
 void swap_nodes(listint_t **list, listint_t *left, listint_t *right);
 void cocktail_sort_list(listint_t **list);
 void counting_sort(int *array, size_t size);
+void merge(int *array, int *left, int *right, size_t size);
+void merge_sort(int *array, size_t size);
 
 #endif /* SORT_H */
