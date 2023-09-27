@@ -1,0 +1,10 @@
+Counting Sort Algorithm:
+
+In the best case:
+- Time Complexity: O(n + k)
+
+In the average case:
+- Time Complexity: O(n + k)
+
+In the worst case:
+- Time Complexity: O(n + k)
