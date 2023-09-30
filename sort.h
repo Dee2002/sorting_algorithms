@@ -42,4 +42,7 @@ void bitonic_sort(int *array, size_t size);
 void bitonic_sort_recursive(int *array, size_t size, int up, size_t step);
 void bitonic_merge(int *array, size_t size, int up, size_t step);
 void quick_sort_hoare(int *array, size_t size);
+int card_cmp(const void *a, const void *b);
+int kind_cmp(const void *a, const void *b);
+void sort_deck(deck_node_t **deck);
 #endif /* SORT_H */
