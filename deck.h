@@ -1,46 +1,50 @@
 #ifndef DECK_H
 #define DECK_H
 
+#include <stdlib.h>
+
 /**
-* enum kind_e - Represents the kinds of cards
-* @SPADE: Spades
-* @HEART: Hearts
-* @CLUB: Clubs
-* @DIAMOND: Diamonds
-*/
+ * enum kind_e - Enumeration of card suits.
+ * @SPADE: Spades suit.
+ * @HEART: Hearts suit.
+ * @CLUB: Clubs suit.
+ * @DIAMOND: Diamonds suit.
+ */
 typedef enum kind_e
 {
-SPADE = 0,
-HEART,
-CLUB,
-DIAMOND
+	SPADE = 0,
+	HEART,
+	CLUB,
+	DIAMOND
 } kind_t;
 
 /**
-* struct card_s - Represents a playing card
-* @value: The card's value (e.g., "Ace" to "King")
-* @kind: The card's kind (e.g., SPADE, HEART, CLUB, DIAMOND)
-*/
+ * struct card_s - Playing card
+ *
+ * @value: Value of the card
+ * From "Ace" to "King"
+ * @kind: Kind of the card
+ */
 typedef struct card_s
 {
-const char *value;
-const kind_t kind;
+	const char *value;
+	const kind_t kind;
 } card_t;
 
 /**
-* struct deck_node_s - Represents a node in a deck of cards
-* @card: Pointer to the card
-* @prev: Pointer to the previous node
-* @next: Pointer to the next node
-*/
+ * struct deck_node_s - Deck of card
+ *
+ * @card: Pointer to the card of the node
+ * @prev: Pointer to the previous node of the list
+ * @next: Pointer to the next node of the list
+ */
 typedef struct deck_node_s
 {
-const card_t *card;
-struct deck_node_s *prev;
-struct deck_node_s *next;
+	const card_t *card;
+	struct deck_node_s *prev;
+	struct deck_node_s *next;
 } deck_node_t;
 
-/* Function prototype for sorting the deck of cards */
 void sort_deck(deck_node_t **deck);
 
 #endif /* DECK_H */
